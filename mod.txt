@@ -1,0 +1,115 @@
+[ModMeta]
+schema=2
+name=Citroen Minibuses
+author=MasterStudioCZ
+desc=Mod containing Citroën minibuses.
+version=1.0
+
+[TrainUnit]
+schema=2
+id=Citroen_C25
+name_loc=Citroen_C25
+name_en=Citroën C25
+length=4.65
+width=2
+max_speed=70
+power=55
+empty_mass=2500
+price=12500
+max_pax=7
+pax_doors_per_side=1
+cost_per_km_per_pax=0.11
+cost_per_day=17
+tags=sitting,diesel
+tex_base=citroen/citroen_c25.png
+tex_top=citroen/citroen_c25_top.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumpy
+name_loc=Citroen_Jumpy
+name_en=Citroën Jumpy
+length=5.13
+width=2.2
+max_speed=110
+power=100
+empty_mass=2791
+price=35000
+max_pax=7
+pax_doors_per_side=1
+cost_per_km_per_pax=0.06
+cost_per_day=12
+tags=sitting,diesel
+tex_base=citroen/citroen_jumpy.png
+tex_top=citroen/citroen_jumpy_top.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumper
+name_loc=Citroen_Jumper
+name_en=Citroën Jumper
+length=5.4
+width=2.05
+max_speed=140
+power=110
+empty_mass=3300
+price=42000
+max_pax=10
+pax_doors_per_side=1
+cost_per_km_per_pax=0.07
+cost_per_day=15
+tags=sitting,diesel
+tex_base=citroen/citroen_jumper.png
+tex_top=citroen/citroen_jumper_top.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainMultipleUnit]
+schema=2
+id=Citroen_C25_MU
+name_loc=Citroen_C25_MU
+name_en=Citroen C25
+description_loc=Citroen_C25_desc_MU
+description_en=Description
+year_introduced=1981
+tags=standard
+default_code=Citroen C25-####
+default_name=Citroen C25-####
+composition=Citroen_C25,Citroën C25,Citroen_C25
+
+[TrainMultipleUnit]
+schema=2_MU
+id=Citroen_Jumpy
+name_loc=Citroen_Jumpy_MU
+name_en=Citroen Jumpy
+description_loc=Citroen_Jumpy_desc_MU
+description_en=Description
+year_introduced=1995
+tags=standard
+default_code=Citroen Jumpy-####
+default_name=Citroen Jumpy-####
+composition=Citroen_Jumpy,Citroën Jumpy,Citroen_Jumpy
+
+[TrainMultipleUnit]
+schema=2
+id=Citroen_Jumper_MU
+name_loc=Citroen_Jumper_MU
+name_en=Citroen Jumper
+description_loc=Citroen_Jumper_desc_MU
+description_en=Description.
+year_introduced=1994
+tags=standard
+default_code=Citroen C25-####
+default_name=Citroen C25-####
+composition=Citroen_Jumper,Citroën Jumper,Citroen_Jumper
+_______________________________________________________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________________________________________
+
