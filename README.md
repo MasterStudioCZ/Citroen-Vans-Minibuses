@@ -10,7 +10,7 @@
    - Citroën ë-Jumpy (3rd generation)
    - **Citroën Jumper** (1st generation)
    - Citroën Jumper (2nd generation)
-   - Citroën Jumper (3rd generation)
+   - Citroën ë-Jumper (2nd generation)
 
 # Plans
 - [ ] Citroën Type H
@@ -20,7 +20,6 @@
 - [ ] Citroën C15
 - [ ] Citroën Nemo
 - [ ] Citroën U23
-- [ ] Citroën C15
 
 # Notes
 * Vehicles in this mod have higher running costs than trains in the base game. The reason is that costs in the base game are just unrealistic.
