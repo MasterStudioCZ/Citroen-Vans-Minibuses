@@ -1,25 +1,38 @@
 [ModMeta]
 schema=2
-name=Citroen Minibuses
+name=Citroen Vans & Minibuses
 author=MasterStudioCZ
 desc=Mod containing Citroën minibuses.
-version=1.0
+version=1.1.0
+-- Formula for daily cost calculation: SALARY COSTS (12$/hour) x MAINTENANCE
+-- MAINTENANCE:
+-- IF STILL SOLD: 15$/day (5$ if electric)
+-- IF DISCONTINUED: 20$/day + 0.5$ x YEARS SINCE DISCONTINUED (+0.125$ if electric)
+-- Prices of energy: 0.16$/kWh
+-- Prices of fuel: 1.5$/litre
+-- Formula for cost per pax per km: PASSENGER WEIGHT ÷ (WEIGHT OF THE VEHICLE + (ALL PASSENGERS ÷ 70)) × DAILY COST
+-- Formula for cost per pax per km (EVs): PASSENGER WEIGHT ÷ (WEIGHT OF THE VEHICLE + (ALL PASSENGERS ÷ 70)) × DAILY COST ÷ 1.5
+-- Formula for maximum acceleration: 27.7778 ÷ TIME TO GET TO 100 KPH)
 
 [TrainUnit]
 schema=2
 id=Citroen_C25
 name_loc=Citroen_C25
 name_en=Citroën C25
+description=The minibus version of Citroën C25 was introduced in 1982.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 35$
+year_introduced=1982
+year_retired=1994
 length=4.65
 width=2
 max_speed=70
 power=55
 empty_mass=2500
-price=12500
-max_pax=7
+price=11000
+max_pax=6
 pax_doors_per_side=1
-cost_per_km_per_pax=0.11
-cost_per_day=17
+cost_per_km=0.1
+cost_per_km_per_pax = 0.0023
+cost_per_day=275
 tags=sitting,diesel
 tex_base=citroen/citroen_c25.png
 tex_top=citroen/citroen_c25_top.png
@@ -32,20 +45,104 @@ recolor_base=true
 schema=2
 id=Citroen_Jumpy
 name_loc=Citroen_Jumpy
-name_en=Citroën Jumpy
-length=5.13
-width=2.2
-max_speed=110
-power=100
-empty_mass=2791
-price=35000
-max_pax=7
+name_en=Citroën Jumpy (1st generation)
+description=The 1st generation of Citroën Jumpy became available in 1994.<br>This specific model uses the 1.9 TD PSA XUD9TE diesel engine.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 30$
+year_introduced=1994
+year_retired=2004
+length=4.44
+width=1.81
+max_speed=137
+max_acceleration = 1.956
+power=68
+empty_mass=1450
+price=15000
+max_pax=6
 pax_doors_per_side=1
-cost_per_km_per_pax=0.06
-cost_per_day=12
+cost_per_km=0.08
+cost_per_km_per_pax = 0.00299
+cost_per_day=270
 tags=sitting,diesel
-tex_base=citroen/citroen_jumpy.png
-tex_top=citroen/citroen_jumpy_top.png
+tex_base=citroen/citroen_jumpy_1.png
+tex_top=citroen/citroen_jumpy_top_1.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumpy_2
+name_loc=Citroen_Jumpy_2
+name_en=Citroën Jumpy (2nd generation)
+description=This generation, launched in 2006, came with increased cargo space over the previous one. The minivan body type became available one year later, in 2012.<br>This specific model uses the Multijet PSA DW10 diesel engine.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 19$
+year_introduced=2007
+year_retired=2016
+length=4.805
+width=1.895
+max_speed=170
+max_acceleration = 1.803
+power=100
+empty_mass=2044
+price=16500
+max_pax=6
+pax_doors_per_side=1
+cost_per_km=0.0925
+cost_per_km_per_pax = 0.0026
+cost_per_day=264
+tags=sitting,diesel
+tex_base=citroen/citroen_jumpy_2.png
+tex_top=citroen/citroen_jumpy_top_2.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumpy_3
+name_loc=Citroen_Jumpy_3
+name_en=Citroën Jumpy (3rd generation)
+description=This generation was first revealed in March 2016, at the Geneva Motor Show. It entered the production during the same month.<br>The passenger version of it is named SpaceTourer. This specific model uses the 150 Multijet PSA DW10 diesel engine.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 15$
+year_introduced=2016
+length=4.959
+width=1.92
+max_speed=182
+max_acceleration = 2.548
+power=112
+empty_mass=1729
+price=28700
+max_pax=6
+pax_doors_per_side=1
+cost_per_km=0.08872
+cost_per_km_per_pax = 0.00289
+cost_per_day=255
+tags=sitting,diesel
+tex_base=citroen/citroen_jumpy_3.png
+tex_top=citroen/citroen_jumpy_top_3.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumpy_3E
+name_loc=Citroen_Jumpy_3E
+name_en=Citroën ë-Jumpy (3rd generation)
+description=The electric version of Citroën Jumpy was launched in 2020.<br>The passenger version of it is named ë-SpaceTourer. It is fitted with a traction motor, the same one Citroën e-Berlingo uses.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 5$
+year_introduced=2020
+length=4.959
+width=1.92
+max_speed=130
+max_acceleration = 2.089
+power=100
+empty_mass=1969
+price=37045
+max_pax=6
+pax_doors_per_side=1
+cost_per_km=0.00175
+cost_per_km_per_pax = 0.00005
+cost_per_day=245
+tags=sitting,electric
+tex_base=citroen/citroen_jumpy_3.png
+tex_top=citroen/citroen_jumpy_top_3.png
 tex_m_width=30
 tex_m_height=3.75
 recolor_base=true
@@ -54,20 +151,77 @@ recolor_base=true
 schema=2
 id=Citroen_Jumper
 name_loc=Citroen_Jumper
-name_en=Citroën Jumper
-length=5.4
-width=2.05
+name_en=Citroën Jumper (1st generation)
+description=The first generation of Citroën Jumper was launched in 1993. It was sold as Citroën Relay in the UK and Ireland.<br>This specific model uses the 2.5 TD PSA T8A diesel engine.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 29$
+year_introduced=1993
+year_retired=2006
+length=4.521
+width=1.943
 max_speed=140
-power=110
-empty_mass=3300
-price=42000
-max_pax=10
+max_acceleration = 1.5
+power=76
+empty_mass=1600
+price=15700
+max_pax=9
 pax_doors_per_side=1
-cost_per_km_per_pax=0.07
-cost_per_day=15
+cost_per_km=0.07
+cost_per_km_per_pax = 0.0022
+cost_per_day=275.5
 tags=sitting,diesel
 tex_base=citroen/citroen_jumper.png
 tex_top=citroen/citroen_jumper_top.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumper_2
+name_loc=Citroen_Jumper_2
+name_en=Citroën Jumper (2nd generation)
+description=The second generation of Citroën Jumper was launched in 2006.<br>This specific model uses the 130 Multijet Iveco F1AE0481N diesel engine.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 20$
+year_introduced=2006
+length=5.608
+width=2.025
+max_speed=150
+max_acceleration = 1.65
+power=81
+empty_mass=2198
+price=28000
+max_pax=13
+pax_doors_per_side=1
+cost_per_km=0.091
+cost_per_km_per_pax = 0.002
+cost_per_day=260
+tags=sitting,diesel
+tex_base=citroen/citroen_jumper_2.png
+tex_top=citroen/citroen_jumper_top_2.png
+tex_m_width=30
+tex_m_height=3.75
+recolor_base=true
+
+[TrainUnit]
+schema=2
+id=Citroen_Jumper_2E
+name_loc=Citroen_Jumper_2E
+name_en=Citroën ë-Jumper (2nd generation)
+description=The electric version of second generation Citroën Jumper, named Citroën ë-Jumper, entered the market in 2020.<br>It has a 70 kWh battery.<br><br>>>> Daily costs <<<<br> Wages: 240$ (1 driver)<br>Maintenance: 6$
+year_introduced=2020
+length=5.998
+width=2.05
+max_speed=110
+max_acceleration = 1.55
+power=90
+empty_mass=2765
+price=58700
+max_pax=13
+pax_doors_per_side=1
+cost_per_km=0.002
+cost_per_km_per_pax = 0.000038
+cost_per_day=246
+tags=sitting,electric
+tex_base=citroen/citroen_jumper_2E.png
+tex_top=citroen/citroen_jumper_top_2E.png
 tex_m_width=30
 tex_m_height=3.75
 recolor_base=true
@@ -78,25 +232,29 @@ id=Citroen_C25_MU
 name_loc=Citroen_C25_MU
 name_en=Citroen C25
 description_loc=Citroen_C25_desc_MU
-description_en=Description
-year_introduced=1981
+description_en=Citroën C25 was a 2.5 tonne capacity van (hence the name C25) produced from 1981 until 1994.
+year_introduced=1982
+year_retired=1994
 tags=standard
 default_code=Citroen C25-####
 default_name=Citroen C25-####
 composition=Citroen_C25,Citroën C25,Citroen_C25
 
 [TrainMultipleUnit]
-schema=2_MU
+schema=2
 id=Citroen_Jumpy
 name_loc=Citroen_Jumpy_MU
-name_en=Citroen Jumpy
+name_en=Citroën Jumpy
 description_loc=Citroen_Jumpy_desc_MU
-description_en=Description
-year_introduced=1995
+description_en=Citroën Jumpy is a light van introduced in 1994. It was jointly developed by FCA Italy and PSA Group.<br>It is also known as Citroën Dispatch in the UK and Ireland.
+year_introduced=1994
 tags=standard
 default_code=Citroen Jumpy-####
 default_name=Citroen Jumpy-####
-composition=Citroen_Jumpy,Citroën Jumpy,Citroen_Jumpy
+composition=Citroen_Jumpy,Citroën Jumpy (1st generation),Citroen_Jumpy
+composition=Citroen_Jumpy_2,Citroën Jumpy (2nd generation),Citroen_Jumpy_2
+composition=Citroen_Jumpy_3,Citroën Jumpy (3rd generation),Citroen_Jumpy_3
+composition=Citroen_Jumpy_3E,Citroën ë-Jumpy (3rd generation),Citroen_Jumpy_3E
 
 [TrainMultipleUnit]
 schema=2
@@ -104,12 +262,11 @@ id=Citroen_Jumper_MU
 name_loc=Citroen_Jumper_MU
 name_en=Citroen Jumper
 description_loc=Citroen_Jumper_desc_MU
-description_en=Description.
-year_introduced=1994
+description_en=The first Citroën Jumper was introduced in 1993. The line is a direct successor to Citroën C25, and technically, the first generation of Jumper is the second generation of C25.
+year_introduced=1993
 tags=standard
-default_code=Citroen C25-####
-default_name=Citroen C25-####
-composition=Citroen_Jumper,Citroën Jumper,Citroen_Jumper
-_______________________________________________________________________________________________________________________________________________________________________
-_______________________________________________________________________________________________________________________________________________________________________
-
+default_code=Citroen Jumper-####
+default_name=Citroen Jumper-####
+composition=Citroen_Jumper,Citroën Jumper (1st generation),Citroen_Jumper
+composition=Citroen_Jumper_2,Citroën Jumper (2nd generation),Citroen_Jumper_2
+composition=Citroen_Jumper_2E,Citroën ë-Jumper (2nd generation),Citroen_Jumper_2E
